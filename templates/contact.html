@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="{{ url_for('styles') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -43,22 +44,22 @@
             <h2 class="text-center mb-5">Contact Us</h2>
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <form>
+                    <form action="{{ url_for('contact') }}" method="post">
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input class="form-control" id="fullName" placeholder="Enter your full name" type="text">
+                            <input class="form-control" id="fullName" name="fullName" placeholder="Enter your full name"
+                                   type="text">
                         </div>
                         <div class="form-group">
                             <label for="email">Email address</label>
-                            <input aria-describedby="emailHelp" class="form-control" id="email"
-                                   placeholder="Enter your email"
-                                   type="email">
+                            <input aria-describedby="emailHelp" class="form-control" id="email" name="email"
+                                   placeholder="Enter your email" type="email">
                             <small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea class="form-control" id="message" placeholder="Enter your message"
+                            <textarea class="form-control" id="message" name="message" placeholder="Enter your message"
                                       rows="3"></textarea>
                         </div>
                         <button class="btn btn-primary" type="submit">Submit</button>
@@ -67,12 +68,16 @@
             </div>
         </div>
     </section>
+    <br>
 </main>
 <footer class="text-muted">
     <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
+        <div class="contact-info">
+            <h6>Feel free to reach out to us with any questions or concerns.</h6>
+            <p><strong>Email:</strong> support@edujet.in</p>
+            <p><strong>Phone:</strong> +1 (420) 696-42690</p>
+            <p><strong>Address:</strong> 225 Main St, Downtown IND 506605</p>
+        </div>
         <p>EduJet &copy; 2023</p>
     </div>
 </footer>
