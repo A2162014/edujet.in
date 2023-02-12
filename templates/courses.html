@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="{{ url_for('styles') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -52,14 +53,124 @@
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img alt="" class="img-fluid" src="https://via.placeholder.com/500x300">
+                        <img alt="" class="img-fluid" src="{{ url_for('static', filename='/img/python.jpg ') }}">
                         <div class="courses-caption">
-                            <h4>Web Development</h4>
-                            <p class="text-muted">Learn the basics of web development and create your own websites.</p>
+                            <h4>Introduction to Python</h4>
+                            <p class="text-muted">Learn the basics of the Python programming language and how to write
+                                scripts and automate tasks.</p>
                         </div>
                     </a>
                 </div>
-                <!-- Repeat the same code block for more courses -->
+                <div class="col-md-4 col-sm-6 courses-item">
+                    <a class="courses-link" data-toggle="modal" href="#coursesModal2">
+                        <div class="courses-hover">
+                            <div class="courses-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img alt="" class="img-fluid" src="{{ url_for('static', filename='/img/dsa.png ') }}">
+                        <div class="courses-caption">
+                            <h4>Data Structures and Algorithms</h4>
+                            <p class="text-muted">Study data structures such as arrays, linked lists, stacks, and
+                                queues, and learn how to implement common algorithms like searching and sorting.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 courses-item">
+                    <a class="courses-link" data-toggle="modal" href="#coursesModal3">
+                        <div class="courses-hover">
+                            <div class="courses-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img alt="" class="img-fluid"
+                             src="{{ url_for('static', filename='/img/Web-Development.jpg ') }}">
+                        <div class="courses-caption">
+                            <h4>Introduction to Web Development</h4>
+                            <p class="text-muted">Get an overview of web development concepts and build your first
+                                website.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 courses-item">
+                    <a class="courses-link" data-toggle="modal" href="#coursesModal3">
+                        <div class="courses-hover">
+                            <div class="courses-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img alt="" class="img-fluid" src="{{ url_for('static', filename='/img/dbms.jpg') }}">
+                        <div class="courses-caption">
+                            <h4>Database Management</h4>
+                            <p class="text-muted">Explore the fundamentals of database design and learn SQL to create
+                                and manage databases, as well as retrieve and manipulate data.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 courses-item">
+                    <a class="courses-link" data-toggle="modal" href="#coursesModal3">
+                        <div class="courses-hover">
+                            <div class="courses-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img alt="" class="img-fluid" src="{{ url_for('static', filename='/img/agile.jpg') }}">
+                        <div class="courses-caption">
+                            <h4>Agile Project Management</h4>
+                            <p class="text-muted">Discover the Agile methodology for software development and learn how
+                                to apply its principles to manage projects, work with stakeholders, and track
+                                progress.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 courses-item">
+                    <a class="courses-link" data-toggle="modal" href="#coursesModal3">
+                        <div class="courses-hover">
+                            <div class="courses-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img alt="" class="img-fluid"
+                             src="{{ url_for('static', filename='/img/Data-science-fundamentals.gif') }}">
+                        <div class="courses-caption">
+                            <h4>Data Science Fundamentals</h4>
+                            <p class="text-muted">Understand data collection, analysis, and visualization techniques to
+                                make informed decisions.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 courses-item">
+                    <a class="courses-link" data-toggle="modal" href="#coursesModal3">
+                        <div class="courses-hover">
+                            <div class="courses-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img alt="" class="img-fluid" src="{{ url_for('static', filename='/img/fullstack.png') }}">
+                        <div class="courses-caption">
+                            <h4>Full-Stack Development</h4>
+                            <p class="text-muted">Gain a comprehensive understanding of how front-end and back-end
+                                technologies interact and learn how to build full-stack web applications using popular
+                                frameworks and technologies.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 courses-item">
+                    <a class="courses-link" data-toggle="modal" href="#coursesModal3">
+                        <div class="courses-hover">
+                            <div class="courses-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img alt="" class="img-fluid"
+                             src="{{ url_for('static', filename='/img/digital-marketing.jpg') }}">
+                        <div class="courses-caption">
+                            <h4>Digital Marketing 101</h4>
+                            <p class="text-muted">Learn how to build and train models that can learn patterns in data on
+                                their own.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

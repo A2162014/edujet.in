@@ -1,4 +1,5 @@
-from flask import Flask, render_template, make_response
+from flask import Flask, render_template, make_response, request
+import csv
 
 app = Flask(__name__, static_folder='static')
 
@@ -32,8 +33,15 @@ def courses():
     return render_template('courses.html')
 
 
-@app.route("/contact")
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        name = request.form['fullName']
+        email = request.form['email']
+        message = request.form['message']
+        with open('form_data.csv', 'a') as file:
+            writer = csv.writer(file)
+            writer.writerow([name, email, message])
     return render_template('contact.html')
 
 
